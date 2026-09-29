@@ -1,0 +1,86 @@
+{
+  "items": [
+    {
+      "item_id": "deterministic-cleanup",
+      "original_text": "اين  يك نمونه است ،اما كوتاه است... و \"مفيد\" است.",
+      "metadata": {
+        "example": "deterministic Persian cleanup"
+      }
+    },
+    {
+      "item_id": "reference-aware-review",
+      "original_text": "شواهد نشان می‌دهد این روش ممکن است کیفیت را بهتر کند.",
+      "reference_text": "Evidence suggests this method may improve quality.",
+      "metadata": {
+        "example": "reference-aware human evaluation"
+      },
+      "human_evaluation": {
+        "linguistic_naturalness": {
+          "score": 5,
+          "evidence": [
+            "جمله روان است و ترتیب اجزای آن طبیعی است."
+          ]
+        },
+        "terminology": {
+          "score": 4,
+          "evidence": [
+            "واژهٔ «کیفیت» با متن مرجع سازگار است."
+          ],
+          "comments": "«بهبود دهد» می‌توانست به مرجع نزدیک‌تر باشد."
+        },
+        "register": {
+          "score": 5,
+          "evidence": [
+            "لحن رسمی و یکدست است."
+          ]
+        },
+        "semantic_fidelity": {
+          "score": 4,
+          "evidence": [
+            "احتمال بهبود و میزان قطعیت متن مرجع حفظ شده است."
+          ]
+        },
+        "epistemic_strength": {
+          "score": 5,
+          "evidence": [
+            "«شواهد نشان می‌دهد» و «ممکن است» قطعیت را محدود می‌کنند."
+          ],
+          "comments": "This rating evaluates certainty language, not factual truth."
+        }
+      }
+    },
+    {
+      "item_id": "no-reference",
+      "original_text": "این ابزار قطعا همه خطاها را پیدا می کند!",
+      "metadata": {
+        "example": "no-reference semantic fidelity rule"
+      },
+      "human_evaluation": {
+        "linguistic_naturalness": {
+          "score": 4,
+          "evidence": [
+            "جمله قابل فهم است."
+          ]
+        },
+        "register": {
+          "score": 3,
+          "evidence": [
+            "لحن قاطع برای معرفی یک ابزار مناسب نیست."
+          ]
+        },
+        "semantic_fidelity": {
+          "applicability": "not_applicable",
+          "score": null,
+          "comments": "No reference text was supplied."
+        },
+        "epistemic_strength": {
+          "score": 2,
+          "evidence": [
+            "«قطعا» و «همه» ادعای بسیار قوی می‌سازند، اما شواهدی به ارزیاب ارائه نشده است."
+          ],
+          "comments": "This is a human judgement of expressed certainty, not a fact-check."
+        }
+      }
+    }
+  ]
+}

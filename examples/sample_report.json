@@ -1,0 +1,398 @@
+{
+  "schema_version": "1.0",
+  "tool": {
+    "name": "persian-ai-quality-evaluator",
+    "version": "0.1.0"
+  },
+  "summary": {
+    "item_count": 3,
+    "deterministic_issue_count": 11,
+    "normalization_change_count": 5,
+    "human_rating_count": 8
+  },
+  "results": [
+    {
+      "item_id": "deterministic-cleanup",
+      "metadata": {
+        "example": "deterministic Persian cleanup"
+      },
+      "original_text": "اين  يك نمونه است ،اما كوتاه است... و \"مفيد\" است.",
+      "reference_text": null,
+      "normalized_text": "این  یک نمونه است ،اما کوتاه است... و \"مفید\" است.",
+      "normalization_changes": [
+        {
+          "code": "arabic_yeh_to_persian",
+          "description": "Replace Arabic yeh with Persian yeh.",
+          "count": 3
+        },
+        {
+          "code": "arabic_kaf_to_persian",
+          "description": "Replace Arabic kaf with Persian kaf.",
+          "count": 2
+        }
+      ],
+      "deterministic_issues": [
+        {
+          "code": "arabic_yeh",
+          "category": "characters",
+          "severity": "warning",
+          "message": "Arabic yeh (ي) is used instead of Persian yeh (ی).",
+          "location": {
+            "start": 1,
+            "end": 2,
+            "context": "اين  يك نمونه "
+          },
+          "suggestion": "Replace with ی."
+        },
+        {
+          "code": "repeated_whitespace",
+          "category": "spacing",
+          "severity": "warning",
+          "message": "Repeated horizontal whitespace was found.",
+          "location": {
+            "start": 3,
+            "end": 5,
+            "context": "اين  يك نمونه است"
+          },
+          "suggestion": "Use a single space."
+        },
+        {
+          "code": "arabic_yeh",
+          "category": "characters",
+          "severity": "warning",
+          "message": "Arabic yeh (ي) is used instead of Persian yeh (ی).",
+          "location": {
+            "start": 5,
+            "end": 6,
+            "context": "اين  يك نمونه است "
+          },
+          "suggestion": "Replace with ی."
+        },
+        {
+          "code": "arabic_kaf",
+          "category": "characters",
+          "severity": "warning",
+          "message": "Arabic kaf (ك) is used instead of Persian kaf (ک).",
+          "location": {
+            "start": 6,
+            "end": 7,
+            "context": "اين  يك نمونه است ،"
+          },
+          "suggestion": "Replace with ک."
+        },
+        {
+          "code": "space_before_punctuation",
+          "category": "punctuation",
+          "severity": "warning",
+          "message": "Whitespace appears immediately before punctuation.",
+          "location": {
+            "start": 17,
+            "end": 18,
+            "context": "يك نمونه است ،اما كوتاه ا"
+          },
+          "suggestion": "Remove the whitespace before the punctuation mark."
+        },
+        {
+          "code": "missing_space_after_punctuation",
+          "category": "punctuation",
+          "severity": "warning",
+          "message": "A letter follows punctuation without a space.",
+          "location": {
+            "start": 18,
+            "end": 19,
+            "context": "ك نمونه است ،اما كوتاه اس"
+          },
+          "suggestion": "Add a space after the punctuation mark."
+        },
+        {
+          "code": "arabic_kaf",
+          "category": "characters",
+          "severity": "warning",
+          "message": "Arabic kaf (ك) is used instead of Persian kaf (ک).",
+          "location": {
+            "start": 23,
+            "end": 24,
+            "context": "نه است ،اما كوتاه است... "
+          },
+          "suggestion": "Replace with ک."
+        },
+        {
+          "code": "three_dots_instead_of_ellipsis",
+          "category": "typography",
+          "severity": "info",
+          "message": "Three full stops are used instead of the ellipsis character.",
+          "location": {
+            "start": 32,
+            "end": 35,
+            "context": "ما كوتاه است... و \"مفيد\" اس"
+          },
+          "suggestion": "Use the single ellipsis character (…)."
+        },
+        {
+          "code": "ascii_quotes_for_persian",
+          "category": "typography",
+          "severity": "info",
+          "message": "Straight ASCII quotation marks surround Persian text.",
+          "location": {
+            "start": 38,
+            "end": 44,
+            "context": "اه است... و \"مفيد\" است."
+          },
+          "suggestion": "Prefer Persian guillemets «…» for Persian prose."
+        },
+        {
+          "code": "arabic_yeh",
+          "category": "characters",
+          "severity": "warning",
+          "message": "Arabic yeh (ي) is used instead of Persian yeh (ی).",
+          "location": {
+            "start": 41,
+            "end": 42,
+            "context": "است... و \"مفيد\" است."
+          },
+          "suggestion": "Replace with ی."
+        }
+      ],
+      "human_evaluation": [
+        {
+          "dimension": "linguistic_naturalness",
+          "category": "naturalness",
+          "applicability": "applicable",
+          "score": null,
+          "evidence": [],
+          "comments": null
+        },
+        {
+          "dimension": "terminology",
+          "category": "terminology",
+          "applicability": "applicable",
+          "score": null,
+          "evidence": [],
+          "comments": null
+        },
+        {
+          "dimension": "register",
+          "category": "register",
+          "applicability": "applicable",
+          "score": null,
+          "evidence": [],
+          "comments": null
+        },
+        {
+          "dimension": "semantic_fidelity",
+          "category": "semantic_fidelity",
+          "applicability": "not_applicable",
+          "score": null,
+          "evidence": [],
+          "comments": null
+        },
+        {
+          "dimension": "epistemic_strength",
+          "category": "epistemic_strength",
+          "applicability": "applicable",
+          "score": null,
+          "evidence": [],
+          "comments": null
+        }
+      ],
+      "issue_taxonomy": [
+        "characters",
+        "unicode",
+        "spacing",
+        "zwnj",
+        "punctuation",
+        "typography",
+        "naturalness",
+        "terminology",
+        "register",
+        "semantic_fidelity",
+        "epistemic_strength"
+      ],
+      "summary": {
+        "normalization_change_count": 5,
+        "deterministic_issue_count": 10,
+        "rated_dimension_count": 0,
+        "not_rated_dimension_count": 4,
+        "not_applicable_dimension_count": 1,
+        "mean_human_score": null
+      }
+    },
+    {
+      "item_id": "reference-aware-review",
+      "metadata": {
+        "example": "reference-aware human evaluation"
+      },
+      "original_text": "شواهد نشان می‌دهد این روش ممکن است کیفیت را بهتر کند.",
+      "reference_text": "Evidence suggests this method may improve quality.",
+      "normalized_text": "شواهد نشان می‌دهد این روش ممکن است کیفیت را بهتر کند.",
+      "normalization_changes": [],
+      "deterministic_issues": [],
+      "human_evaluation": [
+        {
+          "dimension": "linguistic_naturalness",
+          "category": "naturalness",
+          "applicability": "applicable",
+          "score": 5,
+          "evidence": [
+            "جمله روان است و ترتیب اجزای آن طبیعی است."
+          ],
+          "comments": null
+        },
+        {
+          "dimension": "terminology",
+          "category": "terminology",
+          "applicability": "applicable",
+          "score": 4,
+          "evidence": [
+            "واژهٔ «کیفیت» با متن مرجع سازگار است."
+          ],
+          "comments": "«بهبود دهد» می‌توانست به مرجع نزدیک‌تر باشد."
+        },
+        {
+          "dimension": "register",
+          "category": "register",
+          "applicability": "applicable",
+          "score": 5,
+          "evidence": [
+            "لحن رسمی و یکدست است."
+          ],
+          "comments": null
+        },
+        {
+          "dimension": "semantic_fidelity",
+          "category": "semantic_fidelity",
+          "applicability": "applicable",
+          "score": 4,
+          "evidence": [
+            "احتمال بهبود و میزان قطعیت متن مرجع حفظ شده است."
+          ],
+          "comments": null
+        },
+        {
+          "dimension": "epistemic_strength",
+          "category": "epistemic_strength",
+          "applicability": "applicable",
+          "score": 5,
+          "evidence": [
+            "«شواهد نشان می‌دهد» و «ممکن است» قطعیت را محدود می‌کنند."
+          ],
+          "comments": "This rating evaluates certainty language, not factual truth."
+        }
+      ],
+      "issue_taxonomy": [
+        "characters",
+        "unicode",
+        "spacing",
+        "zwnj",
+        "punctuation",
+        "typography",
+        "naturalness",
+        "terminology",
+        "register",
+        "semantic_fidelity",
+        "epistemic_strength"
+      ],
+      "summary": {
+        "normalization_change_count": 0,
+        "deterministic_issue_count": 0,
+        "rated_dimension_count": 5,
+        "not_rated_dimension_count": 0,
+        "not_applicable_dimension_count": 0,
+        "mean_human_score": 4.6
+      }
+    },
+    {
+      "item_id": "no-reference",
+      "metadata": {
+        "example": "no-reference semantic fidelity rule"
+      },
+      "original_text": "این ابزار قطعا همه خطاها را پیدا می کند!",
+      "reference_text": null,
+      "normalized_text": "این ابزار قطعا همه خطاها را پیدا می کند!",
+      "normalization_changes": [],
+      "deterministic_issues": [
+        {
+          "code": "space_in_mi_prefix",
+          "category": "zwnj",
+          "severity": "warning",
+          "message": "The verbal prefix «می» or «نمی» is separated with a regular space.",
+          "location": {
+            "start": 33,
+            "end": 36,
+            "context": "اها را پیدا می کند!"
+          },
+          "suggestion": "Use a zero-width non-joiner (نیم‌فاصله) after the prefix."
+        }
+      ],
+      "human_evaluation": [
+        {
+          "dimension": "linguistic_naturalness",
+          "category": "naturalness",
+          "applicability": "applicable",
+          "score": 4,
+          "evidence": [
+            "جمله قابل فهم است."
+          ],
+          "comments": null
+        },
+        {
+          "dimension": "terminology",
+          "category": "terminology",
+          "applicability": "applicable",
+          "score": null,
+          "evidence": [],
+          "comments": null
+        },
+        {
+          "dimension": "register",
+          "category": "register",
+          "applicability": "applicable",
+          "score": 3,
+          "evidence": [
+            "لحن قاطع برای معرفی یک ابزار مناسب نیست."
+          ],
+          "comments": null
+        },
+        {
+          "dimension": "semantic_fidelity",
+          "category": "semantic_fidelity",
+          "applicability": "not_applicable",
+          "score": null,
+          "evidence": [],
+          "comments": "No reference text was supplied."
+        },
+        {
+          "dimension": "epistemic_strength",
+          "category": "epistemic_strength",
+          "applicability": "applicable",
+          "score": 2,
+          "evidence": [
+            "«قطعا» و «همه» ادعای بسیار قوی می‌سازند، اما شواهدی به ارزیاب ارائه نشده است."
+          ],
+          "comments": "This is a human judgement of expressed certainty, not a fact-check."
+        }
+      ],
+      "issue_taxonomy": [
+        "characters",
+        "unicode",
+        "spacing",
+        "zwnj",
+        "punctuation",
+        "typography",
+        "naturalness",
+        "terminology",
+        "register",
+        "semantic_fidelity",
+        "epistemic_strength"
+      ],
+      "summary": {
+        "normalization_change_count": 0,
+        "deterministic_issue_count": 1,
+        "rated_dimension_count": 3,
+        "not_rated_dimension_count": 1,
+        "not_applicable_dimension_count": 1,
+        "mean_human_score": 3.0
+      }
+    }
+  ]
+}
